@@ -5,13 +5,13 @@ using namespace std;
 //封装函数来实现菜单功能void showMenu()
 void showMenu() 
 {
-	cout << "1，添加联系人" << endl;
-	cout << "2，显示联系人" << endl;
-	cout << "3，删除联系人" << endl;
-	cout << "4，查找联系人" << endl;
-	cout << "5，修改联系人" << endl;
-	cout << "6，清空联系人" << endl;
-	cout << "0，退出通讯录" << endl;
+	cout << "*****1，添加联系人*****" << endl;
+	cout << "*****2，显示联系人*****" << endl;
+	cout << "*****3，删除联系人*****" << endl;
+	cout << "*****4，查找联系人*****" << endl;
+	cout << "*****5，修改联系人*****" << endl;
+	cout << "*****6，清空联系人*****" << endl;
+	cout << "*****0，退出通讯录*****" << endl;
 }
 //联系人结构体
 struct Person
@@ -199,14 +199,14 @@ void modifyPerson(Addressbooks* abs)
 	cin >> name;
 
 	int ret = isExist(abs, name);
-
+	//姓名
 	if (ret != -1)
 	{
 		string name;
 		cout << "请输入姓名" << endl;
 		cin >> name;
 		abs->personArray[ret].m_Name = name;
-
+		//性别
 		int sex=0;
 		cout << "请输入性别" << endl;
 		cout << "1---男" << endl;
