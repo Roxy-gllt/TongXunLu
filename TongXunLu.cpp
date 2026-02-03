@@ -283,6 +283,17 @@ int main()
 	{
 		showMenu();
 		cin >> select;
+		if (cin.fail()) 
+		{
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << "输入有误，请重新输入" << endl;
+			system("pause");
+			system("cls");
+			continue;
+			
+		}
+		
 		switch (select)
 		{
 		case 1://1，添加联系人
@@ -310,6 +321,8 @@ int main()
 			break;
 		default:
 			cout << "  请输入数字1-6  " << endl;
+			system("pause");
+			system("cls");
 			break;
 		
 		}
